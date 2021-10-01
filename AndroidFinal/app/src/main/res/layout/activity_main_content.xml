@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main_app_bar">
+
+    <fragment
+        android:id="@+id/content_main_nav_host_fragment_container"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        app:defaultNavHost="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/mobile_navigation" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/content_main__viewpager2_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/content_main_tab_layout_menu"
+        app:layout_constraintBottom_toTopOf="@+id/content_main_tab_layout_menu"
+        tools:layout_editor_absoluteX="0dp"
+        android:background="@color/black"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/content_main_tab_layout_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?actionBarSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints"
+        android:background="#141414"
+        app:tabTextColor="@color/white"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

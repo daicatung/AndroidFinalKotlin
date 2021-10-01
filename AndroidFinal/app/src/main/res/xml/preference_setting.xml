@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="filter"
+        android:title="Filter">
+        <Preference
+            android:key="popular_movies"
+            android:title="POPULAR MOVIES"/>
+        <Preference
+            android:key="top_rated_movies"
+            android:title="TOP RATED MOVIES"/>
+        <Preference
+            android:key="up_coming_movies"
+            android:title="UP COMING MOVIES"/>
+        <Preference
+            android:key="now_playing_movies"
+            android:title="NOW PLAYING MOVIES"/>
+        <SeekBarPreference
+            android:key="movie_with_rate_from"
+            android:title="Movie with rate from"/>
+        <EditTextPreference
+            android:key="year_movies"
+            android:title="From Release Year"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="sort_by"
+        android:title="Sort by">
+        <Preference
+            android:key="release_date"
+            android:title="RELEASE DATE"/>
+        <Preference
+            android:key="rating"
+            android:title="RATING"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="number_of"
+        android:title="number of">
+        <EditTextPreference
+            android:title="number pager of"
+            android:key="number_of_page"/>
+    </PreferenceCategory>
+</PreferenceScreen>

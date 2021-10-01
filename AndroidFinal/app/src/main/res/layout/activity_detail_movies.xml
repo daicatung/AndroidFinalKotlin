@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailMovies"
+    android:background="@color/background_detail_movies">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/activity_detail_movies_img_favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_16"
+                android:src="@drawable/star"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/activity_detail_movies_tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_32"
+                android:layout_marginLeft="@dimen/dp_32"
+                android:textColor="@color/white"
+                android:text="@string/release_date"
+                app:layout_constraintStart_toEndOf="@+id/activity_detail_movies_img_favorite"
+                app:layout_constraintTop_toTopOf="@+id/activity_detail_movies_img_favorite" />
+
+            <TextView
+                android:id="@+id/activity_detail_movies_tv_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/rating"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/activity_detail_movies_tv_date"
+                app:layout_constraintTop_toBottomOf="@+id/activity_detail_movies_tv_date" />
+
+            <TextView
+                android:id="@+id/activity_detail_movies_tv_adult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_16"
+                android:text="@string/adult"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/activity_detail_movies_img_main"
+                android:layout_width="@dimen/dp_150"
+                android:layout_height="@dimen/dp_200"
+                android:scaleType="centerCrop"
+                android:src="@drawable/test_img"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_margin="@dimen/dp_8"
+                app:layout_constraintTop_toBottomOf="@+id/activity_detail_movies_tv_rating" />
+
+            <Button
+                android:id="@+id/activity_detail_movies_btn_reminder"
+                android:layout_width="@dimen/dp_150"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/reminder"
+                app:backgroundTint="@color/color_btn_detail_movies"
+                app:layout_constraintStart_toStartOf="@+id/activity_detail_movies_img_main"
+                app:layout_constraintTop_toBottomOf="@+id/activity_detail_movies_img_main" />
+
+            <TextView
+                android:id="@+id/activity_detail_movies_tv_overview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_8"
+                android:text="@string/overview"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@+id/activity_detail_movies_img_main"
+                app:layout_constraintTop_toBottomOf="@+id/activity_detail_movies_tv_rating" />
+
+            <TextView
+                android:id="@+id/activity_detail_movies_tv_time_reminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="choose time reminder for you"
+                android:textColor="@color/color_tv_detail_reminder"
+                app:layout_constraintEnd_toEndOf="@+id/activity_detail_movies_btn_reminder"
+                app:layout_constraintStart_toStartOf="@+id/activity_detail_movies_btn_reminder"
+                app:layout_constraintTop_toBottomOf="@+id/activity_detail_movies_btn_reminder" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/cast_and_crew"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_detail_movies_tv_time_reminder" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/activity_detail_movies_rcy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

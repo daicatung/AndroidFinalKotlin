@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/custom_navigation_drawer"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_16"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/dp_120"
+        android:layout_height="@dimen/dp_120"
+        android:layout_gravity="center"
+        app:cardCornerRadius="@dimen/dp_60"
+        android:layout_marginTop="@dimen/dp_16">
+
+        <ImageView
+            android:id="@+id/nav_header_main_img_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/nav_header_desc"
+            android:scaleType="centerCrop"
+            android:src="@drawable/test_img" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/nav_header_main_tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name_user"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/activity_edit_user_tv_date_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/date_user"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/icon_date"/>
+
+    <TextView
+        android:id="@+id/activity_edit_user_tv_email_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/email_user"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/icon_email"/>
+
+    <TextView
+        android:id="@+id/activity_edit_user_tv_sex_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sex_user"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/icon_person"/>
+
+    <Button
+        android:id="@+id/nav_header_main_btn_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:backgroundTint="#635f5b"
+        android:text="Edit"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:text="Reminder List:"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/nav_header_main_tv_mv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#5c77d6"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:id="@+id/nav_header_main_tv_mv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#5c77d6"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"/>
+
+    <Button
+        android:id="@+id/nav_header_main_btn_show_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="#635f5b"
+        android:text="Show all"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:text="Copy right: REC 2015"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:gravity="bottom|center"/>
+</LinearLayout>

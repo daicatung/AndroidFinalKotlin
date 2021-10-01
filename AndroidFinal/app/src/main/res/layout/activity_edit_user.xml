@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditUser">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="@dimen/dp_120"
+        android:layout_height="@dimen/dp_120"
+        android:layout_marginTop="@dimen/dp_16"
+        app:cardCornerRadius="@dimen/dp_60"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/activity_edit_user_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/test_img" />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/activity_edit_user_btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginLeft="@dimen/dp_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardView"
+        android:text="@string/cancel"/>
+
+    <Button
+        android:id="@+id/activity_edit_user_btn_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardView"
+        android:text="Done"/>
+
+    <EditText
+        android:id="@+id/activity_edit_user_tv_name_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <EditText
+        android:id="@+id/activity_edit_user_tv_date_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:drawableLeft="@drawable/icon_date"
+        android:text="@string/date_user"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/activity_edit_user_tv_email_user"
+        app:layout_constraintTop_toBottomOf="@+id/activity_edit_user_tv_email_user" />
+
+    <EditText
+        android:id="@+id/activity_edit_user_tv_email_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:drawableLeft="@drawable/icon_email"
+        android:text="@string/email_user"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/activity_edit_user_tv_sex_user"
+        app:layout_constraintTop_toBottomOf="@+id/activity_edit_user_tv_sex_user" />
+
+    <EditText
+        android:id="@+id/activity_edit_user_tv_sex_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_32"
+        android:layout_marginLeft="@dimen/dp_32"
+        android:layout_marginTop="@dimen/dp_8"
+        android:drawableLeft="@drawable/icon_person"
+        android:text="@string/sex_user"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_edit_user_tv_name_user" />
+</androidx.constraintlayout.widget.ConstraintLayout>
